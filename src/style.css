@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Roboto Black Italic';
+    src: url('./fonts/Roboto-BlackItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+
+body{
+  font-size: 14px;
+    
+}
