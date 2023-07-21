@@ -65,6 +65,7 @@ const handleCreateNewAccount = () => {
 const validateEmail = (email: string) => {
   const expression: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
   let result = expression.test(email)
+  console.log(result)
   return result
 }
 </script>
@@ -79,7 +80,7 @@ const validateEmail = (email: string) => {
             placeholder="Email Address *"
             typeInput="text"
             :isShow="false"
-            :error="errorEmail"
+            :error="!errorEmail"
             @handleChange="(data:string)=> handleChangeInput(data,'email')"
           >
           </v-input>

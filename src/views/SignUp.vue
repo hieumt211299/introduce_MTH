@@ -99,7 +99,7 @@ const handleClickSignUp = () => {
 
   validate.phone = validatePhoneNumber(infoUser.phoneNumber)
 
-  if (validate.email === '' && validate.password && validate.phone === '') {
+  if (!validate.email && validate.password && !validate.phone) {
     accounts.value.unshift(infoUser)
     saveToLocal()
     signUpSuccess()
@@ -155,7 +155,7 @@ const signUpSuccess = () => {
           <v-input
             placeholder="Password"
             typeInput="password"
-            :isShow="true"
+            isShow
             :error="!validate.password"
             @handleChange="(value: string) => handleChangeInput(value, 'password')"
           ></v-input>
@@ -166,6 +166,8 @@ const signUpSuccess = () => {
             typeInput="text"
             :isShow="false"
             :error="Boolean(validate.phone.length)"
+            prefix-icon=""
+            suffix-icon=""
             @handleChange="(value: string) => handleChangeInput(value, 'phoneNumber')"
           ></v-input>
 
@@ -179,9 +181,7 @@ const signUpSuccess = () => {
             <template #default> SIGN UP </template>
           </v-button>
           <router-link to="/">
-            <v-button type="info" style="width: 100%">
-              <template #default> BACK TO LOGIN</template>
-            </v-button>
+            <v-button type="info" style="width: 100%"> BACK TO LOGIN </v-button>
           </router-link>
         </div>
       </div>
@@ -195,13 +195,9 @@ const signUpSuccess = () => {
 </template>
 
 <style>
-.v-sign-up-wrap {
-  .v-sign-up {
-    .el-text.sign-up {
-      font-size: 20px;
-      color: #000000;
-    }
-  }
+.el-text.sign-up {
+  font-size: 20px;
+  color: #000000;
 }
 @media (min-width: 1024px) {
   .about {

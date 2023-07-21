@@ -57,6 +57,7 @@ watch(
   <div class="v-input-item-wrap">
     <div class="user-input-wrp w-full">
       <el-input
+        autofocus="true"
         :class="{ 'red-border': isError }"
         class="h-14"
         v-model="value"
@@ -80,7 +81,7 @@ watch(
 
       <el-text
         class="floating-label text-gray-400 bg-white px-5 fade-in"
-        :class="{ show: value.length > 0 }"
+        :class="{ show: value.length }"
       >
         {{ props.placeholder }}
       </el-text>
@@ -98,18 +99,6 @@ watch(
   }
   .user-input-wrp {
     position: relative;
-    .inputText {
-      width: 100%;
-      outline: none;
-      border: none;
-      border-bottom: 1px solid #777;
-      box-shadow: none !important;
-    }
-    .inputText:focus {
-      border-color: blue;
-      border-width: medium medium 2px;
-      transition: 0.2s ease all;
-    }
     .floating-label {
       position: absolute;
       pointer-events: none;
