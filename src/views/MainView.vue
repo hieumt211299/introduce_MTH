@@ -262,20 +262,14 @@ onBeforeUnmount(() => {
           <div class="">
             <div class="w-96 h-fit">
               <el-image style="" :src="`src/assets/img/project${idx + 1}.png`" fit="cover" />
-              <!-- <img
-                :src="require(`src/assets/img/project${idx + 1}.png`)"
-                :alt="`${item.project}`"
-                class="object-contain w-96 h-fit max-h-[350px] max-w-[350px]"
-              /> -->
-              <!-- <img
-                :src="test(item.img)"
-                :alt="`${item.project}`"
-                class="object-contain w-96 h-fit max-h-[350px] max-w-[350px]"
-              /> -->
             </div>
           </div>
         </div>
       </div>
+      <img src="../assets//img/project1.png" alt="" class="hidden" />
+      <img src="../assets//img/project2.png" alt="" class="hidden" />
+      <img src="../assets//img/project3.png" alt="" class="hidden" />
+      <img src="../assets//img/project4.png" alt="" class="hidden" />
     </template>
   </SectionView>
   <SectionView title="contact me">
