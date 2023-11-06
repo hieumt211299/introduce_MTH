@@ -98,11 +98,11 @@ body {
   clear: both;
 }
 
-.el-image {
+img {
   width: 100%;
   height: 100%;
   transition: transform 0.3s;
 }
-.el-image:hover {
+img:hover {
   transform: scale(1.1);
 }

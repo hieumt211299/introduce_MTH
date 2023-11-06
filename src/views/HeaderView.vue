@@ -13,16 +13,6 @@ const navList = ref<INav[]>([
   // { title: 'clients' },
   // { title: 'contact' }
 ])
-const handleDowloadCV = () => {
-  const link = document.createElement('a')
-  link.href = '../assets//CV.pdf' // Replace with the actual path to your PDF file
-  link.download = 'cv.pdf' // The name you want for the downloaded file
-  link.target = '_blank'
-
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
-}
 </script>
 <template>
   <div class="header-view">
@@ -50,7 +40,7 @@ const handleDowloadCV = () => {
         </h2>
         <p class="text-white text-base">frontend developer</p>
 
-        <a href="../../public/cv.pdf" download="MaiTrungHieu_CV">
+        <a href="https://hieumt211299.github.io/introduce_MTH/cv.pdf" download="MaiTrungHieu_CV">
           <button
             class="animate__animated animate__fadeIn animate__delay-1s text-white p-4 bg-[#ff6600] self-center rounded-lg max-w-[200px] uppercase"
           >

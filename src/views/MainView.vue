@@ -261,15 +261,18 @@ onBeforeUnmount(() => {
           </div>
           <div class="">
             <div class="w-96 h-fit">
-              <el-image style="" :src="`src/assets/img/project${idx + 1}.png`" fit="cover" />
+              <img v-if="idx == 0" src="../assets//img/project1.png" alt="" />
+              <img v-if="idx == 1" src="../assets//img/project2.png" alt="" />
+              <img v-if="idx == 2" src="../assets//img/project3.png" alt="" />
+              <img v-if="idx == 3" src="../assets//img/project4.png" alt="" />
             </div>
           </div>
         </div>
       </div>
-      <img src="../assets//img/project1.png" alt="" class="hidden" />
+      <!-- <img src="../assets//img/project1.png" alt="" class="hidden" />
       <img src="../assets//img/project2.png" alt="" class="hidden" />
       <img src="../assets//img/project3.png" alt="" class="hidden" />
-      <img src="../assets//img/project4.png" alt="" class="hidden" />
+      <img src="../assets//img/project4.png" alt="" class="hidden" />  -->
     </template>
   </SectionView>
   <SectionView title="contact me">
