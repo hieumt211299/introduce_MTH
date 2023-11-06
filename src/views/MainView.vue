@@ -258,7 +258,7 @@ onBeforeUnmount(() => {
           <div class="">
             <div class="w-96 h-fit">
               <img
-                :src="`src/assets/img/project${idx + 1}.png`"
+                :src="`introduce_MTH/assets/img/project${idx + 1}.png`"
                 :alt="`${item.project}`"
                 class="object-contain w-96 h-fit max-h-[350px] max-w-[350px]"
               />
