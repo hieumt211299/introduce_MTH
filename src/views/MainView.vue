@@ -75,6 +75,10 @@ onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
+const test = (idx: number) => {
+  let x = `../introduce_MTH/src/assets/img/project${idx + 1}.png`
+  return x
+}
 // const handleClickProject = (url: string) => {
 //   router.push(`/project/${url}`)
 // }
@@ -257,8 +261,13 @@ onBeforeUnmount(() => {
           </div>
           <div class="">
             <div class="w-96 h-fit">
+              <!-- <img
+                :src="`src/assets/img/project${idx + 1}.png`"
+                :alt="`${item.project}`"
+                class="object-contain w-96 h-fit max-h-[350px] max-w-[350px]"
+              />  -->
               <img
-                :src="`introduce_MTH/assets/img/project${idx + 1}.png`"
+                :src="test(idx)"
                 :alt="`${item.project}`"
                 class="object-contain w-96 h-fit max-h-[350px] max-w-[350px]"
               />
