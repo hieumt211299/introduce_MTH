@@ -2,14 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'Roboto Black Italic';
-    src: url('./fonts/Roboto-BlackItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-  }
+:root {
+  --main-color: #ff6600;
+}
+.main-text_color {
+  color: #ff6600;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
 
-body{
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #6a708e;
+  background: #fff;
+  /* max-width: 1920px; */
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: #43485c;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 24px;
+}
+p {
+  margin: 0;
+  line-height: 1.8;
+  color: #999fb3;
   font-size: 14px;
-    
+  font-family: 'Poppins', sans-serif;
+}
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+
+select,
+input,
+textarea,
+button {
+  box-shadow: none;
+  outline: 0 !important;
+}
+button {
+  background: transparent;
+  border: 0;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+[placeholder]:focus::-webkit-input-placeholder {
+  -webkit-transition: opacity 0.3s 0.3s ease;
+  -moz-transition: opacity 0.3s 0.3s ease;
+  -ms-transition: opacity 0.3s 0.3s ease;
+  -o-transition: opacity 0.3s 0.3s ease;
+  transition: opacity 0.3s 0.3s ease;
+  opacity: 0;
+}
+
+.fix {
+  position: relative;
+  clear: both;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+img:hover {
+  transform: scale(1.1);
 }
