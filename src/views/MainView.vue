@@ -275,7 +275,7 @@ onBeforeUnmount(() => {
       <img src="../assets//img/project4.png" alt="" class="hidden" />  -->
     </template>
   </SectionView>
-  <SectionView title="contact me">
+  <SectionView title="contact">
     <template #content>
       <div class="flex justify-between font-semibold">
         <div class="flex justify-start gap-12 font-semibold">

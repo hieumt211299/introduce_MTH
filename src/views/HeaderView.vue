@@ -8,8 +8,8 @@ const navList = ref<INav[]>([
   { title: 'about me' },
   { title: 'education' },
   { title: 'experience' },
-  { title: 'personal project' }
-  // { title: 'portfolio' },
+  { title: 'personal project' },
+  { title: 'contact' }
   // { title: 'clients' },
   // { title: 'contact' }
 ])
