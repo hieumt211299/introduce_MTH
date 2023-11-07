@@ -109,7 +109,7 @@ onBeforeUnmount(() => {
               </h3>
               <a
                 v-if="item.title == 'Website'"
-                href="hieumt211299.github.io/introduce_MTH/"
+                href="https://hieumt211299.github.io/introduce_MTH/"
                 class="text-sm text-[#999fb3]"
               >
                 {{ item.content }}</a
@@ -294,7 +294,7 @@ onBeforeUnmount(() => {
 
             <a
               v-if="item.title == 'Website'"
-              href="hieumt211299.github.io/introduce_MTH/"
+              href="https://hieumt211299.github.io/introduce_MTH/"
               class="text-sm text-[#999fb3]"
             >
               {{ item.content }}</a
