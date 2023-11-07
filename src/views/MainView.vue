@@ -49,7 +49,7 @@ const personalProject = reactive<IPersonalProject[]>([
 const aboutContents = reactive<IAbout[]>([
   { title: 'Phone', content: '0927167725' },
   { title: 'Email', content: 'hieumt211299@gmail.com' },
-  { title: 'Website', content: 'latterlatterlatter' }
+  { title: 'Website', content: 'hieumt211299.github.io/introduce_MTH' }
 ])
 
 const router = useRouter()
@@ -107,7 +107,15 @@ onBeforeUnmount(() => {
               <h3 class="text-lg leading-relaxed">
                 {{ item.title }}
               </h3>
-              <p>{{ item.content }}</p>
+              <a
+                v-if="item.title == 'Website'"
+                href="hieumt211299.github.io/introduce_MTH/"
+                class="text-sm text-[#999fb3]"
+              >
+                {{ item.content }}</a
+              >
+
+              <p v-else>{{ item.content }}</p>
             </div>
           </div>
         </div>
@@ -283,7 +291,16 @@ onBeforeUnmount(() => {
             <h3 class="text-lg leading-relaxed">
               {{ item.title }}
             </h3>
-            <p>{{ item.content }}</p>
+
+            <a
+              v-if="item.title == 'Website'"
+              href="hieumt211299.github.io/introduce_MTH/"
+              class="text-sm text-[#999fb3]"
+            >
+              {{ item.content }}</a
+            >
+
+            <p v-else>{{ item.content }}</p>
           </div>
         </div>
         <div class="flex gap-10 justify-center items-center">
