@@ -90,12 +90,12 @@ onBeforeUnmount(() => {
       <div class="flex justify-between gap-10">
         <div class="flex flex-col gap-2 font-semibold">
           <div class="border-b-2 pb-12 flex flex-col gap-5">
-            <h3 class="text-lg leading-relaxed">
+            <p class="text-lg leading-relaxed text-black">
               I'm a Frontend Developer. With logical and creative thinking skills.<br />
               I want to become one of the key members bringing effective IT solutions to the
               company. At the same time, I want to improve my knowledge in your professional working
               environment.
-            </h3>
+            </p>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda facilis ipsa
               exercitationem itaque nobis delectus, aperiam molestiae. Nemo nam corporis provident

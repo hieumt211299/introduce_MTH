@@ -34,7 +34,7 @@ const navList = ref<INav[]>([
         <h2
           class="animate__animated animate__fadeInDownBig uppercase text-6xl text-white font-bold leading-snug"
         >
-          hi <span class="main-text_color">,</span> i am <br />
+          hello <span class="main-text_color">,</span> this is <br />
           Hieu <br />
           Mai Trung <span class="main-text_color">.</span>
         </h2>
