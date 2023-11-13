@@ -7,6 +7,10 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElCarousel: typeof import('element-plus/es')['ElCarousel']
+    ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
+    Html: typeof import('./src/components/Icons/html.vue')['default']
     IconCommunity: typeof import('./src/components/Icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/Icons/IconDocumentation.vue')['default']
     IconEcosystem: typeof import('./src/components/Icons/IconEcosystem.vue')['default']
@@ -16,6 +20,8 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     VArrowForWard: typeof import('./src/components/Icons/VArrowForWard.vue')['default']
     VButton: typeof import('./src/components/Button/VButton.vue')['default']
+    VHtml: typeof import('./src/components/Icons/vHtml.vue')['default']
+    VIcon: typeof import('./src/components/VIcon.vue')['default']
     VInput: typeof import('./src/components/Input/VInput.vue')['default']
   }
 }
