@@ -20,10 +20,10 @@ const navList = ref<INav[]>([
 ])
 
 const images = [
-  'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2V8ZW58MHx8MHx8fDA%3D',
-  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dW5pdmVyc2V8ZW58MHx8MHx8fDA%3D',
   'https://images.unsplash.com/photo-1529788295308-1eace6f67388?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHVuaXZlcnNlfGVufDB8fDB8fHww',
-  'https://media.istockphoto.com/id/1399246824/photo/digital-eye-wave-lines-stock-background.webp?b=1&s=170667a&w=0&k=20&c=k7LI06N_W3AKrcB17bN4wF-Dc29FZUmrg9Sicvxsg6E='
+  'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2V8ZW58MHx8MHx8fDA%3D',
+  'https://media.istockphoto.com/id/1399246824/photo/digital-eye-wave-lines-stock-background.webp?b=1&s=170667a&w=0&k=20&c=k7LI06N_W3AKrcB17bN4wF-Dc29FZUmrg9Sicvxsg6E=',
+  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dW5pdmVyc2V8ZW58MHx8MHx8fDA%3D'
 ]
 
 const scrollToTarget = (title: string) => {
@@ -66,7 +66,7 @@ const scrollToTarget = (title: string) => {
           </a>
         </div>
       </div>
-      <el-carousel :interval="5000" arrow="always" height="100vh" width="100%">
+      <el-carousel :interval="2500" arrow="always" height="100vh" width="100%">
         <el-carousel-item v-for="item in images" :key="item">
           <img :src="`${item}`" alt="" class="hover:scale-100 object-cover" />
         </el-carousel-item>

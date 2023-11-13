@@ -12,7 +12,7 @@ const props = defineProps<Props>()
         {{ props.title }}
       </h2>
     </div>
-    <div class="px-20 py-12 w-full max-w-[1140px]">
+    <div class="px-20 py-12 w-full max-w-[1540px]">
       <slot name="content" />
     </div>
   </div>

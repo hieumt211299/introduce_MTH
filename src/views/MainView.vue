@@ -299,12 +299,14 @@ onBeforeUnmount(() => {
           class="flex gap-20 py-20 border-b-2 border-dashed last:border-b-0 h-a"
           :class="{ 'flex-row-reverse': idx % 2 == 0 }"
         >
-          <div class="w-1/2 h-full text-black gap-5 flex flex-col">
-            <h3 class="text-lg font-semibold">{{ item.project }}</h3>
-            <p class="text-black text-base">
-              {{ item.description }}
-            </p>
-            <p class="text-black text-base">Technical: {{ item.tech.join(', ') }}</p>
+          <div class="w-1/2 h-auto text-black gap-5 flex flex-col justify-between">
+            <div class="gap-5 flex flex-col">
+              <h3 class="text-lg font-semibold">{{ item.project }}</h3>
+              <p class="text-black text-base">
+                {{ item.description }}
+              </p>
+              <p class="text-black text-base">Technical: {{ item.tech.join(', ') }}</p>
+            </div>
             <div class="flex gap-2">
               <div
                 class="w-full bg-[#ff6000] rounded-xl p-1 hover:bg-[#ff791f]"
@@ -321,35 +323,7 @@ onBeforeUnmount(() => {
               </div>
             </div>
           </div>
-          <div class="w-1/2">
-            <!-- <a v-if="idx == 0" href="https://mthtodolist.netlify.app" class="h-48" target="_blank">
-              <img
-                src="https://media.giphy.com/media/V8v3i74bpTDJEuvqD6/giphy.gif"
-                alt="project1"
-              />
-            </a>
-
-            <a v-if="idx == 1" href="https://mthfigflix.netlify.app" target="_blank">
-              <img
-                src="https://media.giphy.com/media/Y2Zz43kJD9WyB2t4Wn/giphy.gif"
-                alt="project2"
-              />
-            </a>
-
-            <a v-if="idx == 2" href="https://mthtictactoe.netlify.app" target="_blank">
-              <img
-                src="https://media.giphy.com/media/7POcN9Iv6un2v6vKj8/giphy.gif"
-                alt="project3"
-              />
-            </a>
-
-            <a v-if="idx == 3" href="https://mthsimon.netlify.app" target="_blank">
-              <img
-                src="https://media.giphy.com/media/Sv1EuMezN0u962vN1E/giphy.gif"
-                alt="project4"
-              />
-            </a> -->
-
+          <div class="w-1/2 h-auto">
             <a :href="`${item.live}`" target="_blank">
               <img :src="`${item.img}`" :alt="`${item.project}`" />
             </a>
