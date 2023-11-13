@@ -57,7 +57,7 @@ const scrollToTarget = (title: string) => {
           </h2>
           <p class="text-white text-base">frontend developer</p>
 
-          <a href="https://docdro.id/g0z87gT" download="MaiTrungHieu_CV">
+          <a href="https://docdro.id/g0z87gT" download="MaiTrungHieu_CV" target="_blank">
             <button
               class="animate__animated animate__fadeIn animate__delay-1s text-white p-4 bg-[#ff6600] self-center rounded-lg max-w-[200px] uppercase hover:bg-[#ff791f]"
             >
