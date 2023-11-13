@@ -10,6 +10,9 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // https://vitejs.dev/config/
 export default defineConfig({
   // base: '/introduce_MTH/',
+  build: {
+    chunkSizeWarningLimit: 1100 // Set your preferred limit in kBs
+  },
   plugins: [
     vue(),
     AutoImport({
