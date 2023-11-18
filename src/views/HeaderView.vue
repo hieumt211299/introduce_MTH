@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import 'animate.css'
 
 interface INav {
@@ -10,6 +10,7 @@ type Emits = {
 }
 
 const emit = defineEmits<Emits>()
+const isHeaderHidden = ref(false)
 
 const navList = ref<INav[]>([
   { title: 'skills' },
@@ -29,10 +30,35 @@ const images = [
 const scrollToTarget = (title: string) => {
   emit('scrollToTarget', title)
 }
+let scrollY = 0
+const handleScroll = () => {
+  console.log('scrollY: ' + scrollY)
+  console.log('window.scrollY: ' + window.scrollY)
+  if (window.scrollY - scrollY > 100) {
+    isHeaderHidden.value = true
+    scrollY = window.scrollY
+  }
+  if (scrollY - window.scrollY > 100) {
+    isHeaderHidden.value = false
+    scrollY = window.scrollY
+  }
+
+  // Check the scroll position and update isHeaderHidden accordingly
+  // isHeaderHidden.value = window.scrollY > 0
+}
+
+onMounted(() => {
+  // Add the scroll event listener when the component is mounted
+  window.addEventListener('scroll', handleScroll)
+})
+onBeforeUnmount(() => {
+  // Remove the scroll event listener when the component is destroyed
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 <template>
   <div class="header-view">
-    <div class="header h-20 fixed w-full mx-auto my-0">
+    <div class="header h-20 fixed w-full mx-auto my-0" :class="{ hidden: isHeaderHidden }">
       <div class="flex justify-between items-center h-full px-20">
         <a href="/" class="name text-xl font-semibold">MTH</a>
         <div class="nav flex gap-10 uppercase h-full items-center justify-center">
@@ -79,8 +105,7 @@ const scrollToTarget = (title: string) => {
   margin: 0 auto;
 
   .header {
-    background: black;
-    background: linear-gradient(rgba(0, 0, 0), rgba(246, 134, 59, 0.3));
+    background: linear-gradient(rgba(0, 0, 0), rgb(246, 134, 59));
     z-index: 9999;
     .name {
       color: var(--main-color);
@@ -96,7 +121,7 @@ const scrollToTarget = (title: string) => {
       width: 100vw;
       .el-carousel__container {
         .el-carousel__item {
-          background-image: linear-gradient(rgba(255, 102, 0, 0.1), rgba(255, 102, 0, 0.1));
+          background-image: linear-gradient(rgba(255, 102, 0, 0.1), rgb(255, 102, 0));
         }
         i {
           scale: 1.5;
