@@ -60,7 +60,7 @@ onBeforeUnmount(() => {
   <div class="header-view">
     <div class="header h-20 fixed w-full mx-auto my-0" :class="{ hidden: isHeaderHidden }">
       <div class="flex justify-between items-center h-full px-20">
-        <a href="/" class="name text-xl font-semibold">MTH</a>
+        <a href="/" class="name text-xl font-semibold">Trung Hieu</a>
         <div class="nav flex gap-10 uppercase h-full items-center justify-center">
           <div v-for="(item, index) in navList" :key="index">
             <!-- <a :href="`#${item.title}`" class="hover:text-[#ff6600] text-white">{{ item.title }}</a> -->
@@ -106,6 +106,8 @@ onBeforeUnmount(() => {
 
   .header {
     background: linear-gradient(rgba(0, 0, 0), rgb(246, 134, 59));
+
+    background: linear-gradient(#ff6000 -9.41%, rgba(0, 0, 0) 97.45%);
     z-index: 9999;
     .name {
       color: var(--main-color);
@@ -121,7 +123,7 @@ onBeforeUnmount(() => {
       width: 100vw;
       .el-carousel__container {
         .el-carousel__item {
-          background-image: linear-gradient(rgba(255, 102, 0, 0.1), rgb(255, 102, 0));
+          background-image: linear-gradient(rgba(255, 102, 0, 0.1), rgb(246, 134, 59));
         }
         i {
           scale: 1.5;
