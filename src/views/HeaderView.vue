@@ -105,9 +105,9 @@ onBeforeUnmount(() => {
   margin: 0 auto;
 
   .header {
-    background: linear-gradient(rgba(0, 0, 0), rgb(246, 134, 59));
+    background: linear-gradient(rgba(0, 0, 0), rgba(246, 134, 59, 0.8));
 
-    background: linear-gradient(#ff6000 -9.41%, rgba(0, 0, 0) 97.45%);
+    // background: linear-gradient(#ff6000 -9.41%, rgba(0, 0, 0) 97.45%);
     z-index: 9999;
     .name {
       color: var(--main-color);
